@@ -2,7 +2,7 @@ void setup() {
  size(500, 500);
 }
 
-int x = 200;
+int x = 200, gx = -100, speed = 1;
 
 void draw() {
   noStroke();
@@ -28,5 +28,24 @@ void draw() {
   fill(0, 0, 0);
   ellipse(x + 20, 320, 20, 20);
   ellipse(x + 60, 320, 20, 20);
+  
+  // draw a green car
+  
+  fill(150, 150, 150);
+  ellipse(gx + 30, 320, 90, 20);
+
+  fill(0,255,30);
+  rect(gx, 300, 80, 20);
+  rect(gx + 10, 285, 60, 15);
+  
+  fill(150, 170, 200);
+  rect(gx + 47, 287, 20, 10);
+  rect(gx + 25, 287, 20, 10);
+  
+  fill(0, 0, 0);
+  ellipse(gx + 20, 320, 20, 20);
+  ellipse(gx + 60, 320, 20, 20);
+
+  gx += speed;
 
 }
